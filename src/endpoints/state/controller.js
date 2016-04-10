@@ -118,7 +118,7 @@ export function valid (schema) {
     if (validate(req)) {
       next();
     } else {
-      res.status(409).send({
+      res.status(400).send({
         errors: validate.errors
       });
     }
